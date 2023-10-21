@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LoveBurger</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animate.css">
     <script src="js.js"></script>
 </head>
 <body >
     <header>
-        <a onclick="animationCards()">LoveBurger</a>
-        <a href="index.html">Menu</a>
+        <a href="index.php">LoveBurger</a>
+        <a href="index.php">Menu</a>
         <a href="about.html">About</a>
         <a href="cart.html">Cart<img src="imgs/shopping.png"></a>
         <div class="user2"><a href="singpage.html">Rodrigo<img src="imgs/user.png"></a></div>
@@ -20,13 +21,13 @@
         <div class="SignUp" id="SignUp">
             <div class="right-card"  id="right-card">
                 <div class="Signup-title">SIGN UP</div>
-                <form>
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" autocomplete="off">
-                    <label for="password">Password:</label>
-                    <input type="password" name="password" autocomplete="off">
-                    <label for="tel">Tel:</label>
-                    <input type="tel" name="tel" autocomplete="off">
+                <form action="cadastro.php" method="POST">
+                    <label for="emailsignup">Email:</label>
+                    <input type="email" name="emailsignup" autocomplete="off" required>
+                    <label for="passwordsignup">Password:</label>
+                    <input type="password" name="passwordsignup" autocomplete="off" required>
+                    <label for="nicknamesignup">Nickname:</label>
+                    <input type="text" name="nicknamesignup" autocomplete="off" required>
                     <button class="pointer">Create</button>
                 </form>
             </div>
@@ -38,11 +39,11 @@
         <div class="SignIn displaynone" id="SignIn">
             <div class="card" id="card">
                 <div class="Signin-title">SIGN IN</div>
-                <form>
+                <form action="login.php" method="POST">
                     <label for="email" >Email:</label>
-                    <input type="email" autocomplete="off" name="email">
+                    <input type="email" autocomplete="off" name="emailsignin" required>
                     <label for="password">Password:</label>
-                    <input type="password" name="password" autocomplete="off">
+                    <input type="password" name="passwordsignin" autocomplete="off" required>
                     <button  class="pointer">Connect</button>
                 </form>
             </div>
@@ -53,6 +54,5 @@
         </div>
     </div>
 </main>
-
 </body>
 </html>

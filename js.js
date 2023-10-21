@@ -14,6 +14,7 @@ function lanches(NomeLanche, ValorLanche, ImagemLanche){
     var numbervalue = document.createElement("div");
     var pnoclass = document.createElement("p");
     var addacart = document.createElement("p");
+    var btn = document.createElement("button");
     /*Class*/
     menuitem.classList = "menu-item";
     imglanch.classList = "img-lanch";
@@ -22,6 +23,7 @@ function lanches(NomeLanche, ValorLanche, ImagemLanche){
     menutype.classList = "menu-type";
     menuvaluenumber.classList = "menu-value-number";
     plus.classList = "plus";
+    btn.classList = "plus";
     numbervalue.classList = "number-value";
     addacart.classList = "add-a-cart";
     /*Src*/
@@ -29,7 +31,7 @@ function lanches(NomeLanche, ValorLanche, ImagemLanche){
     plus.src = "imgs/Plus.png";
     /*Inner HTML*/
     h2.innerHTML = NomeLanche;
-    valueproduct.innerHTML = ValorLanche;
+    valueproduct.innerHTML = ValorLanche + "U$";
     pnoclass.innerHTML = "0";
     addacart.innerHTML = "ADD A CART"
     /*Append*/
@@ -42,6 +44,7 @@ function lanches(NomeLanche, ValorLanche, ImagemLanche){
     menutype.appendChild(menuvaluenumber);
     menutype.appendChild(addacart);
     menuvaluenumber.appendChild(plus);
+    menuvaluenumber.appendChild(btn);
     menuvaluenumber.appendChild(numbervalue);
     numbervalue.appendChild(pnoclass);
 }
@@ -151,3 +154,91 @@ function animations2(){
     card.classList.add("animate2back");
     setTimeout(tradecardsingin, 1200);
 }
+
+function adminstock(snackname,snackprice,snackstock,snackid,snackimg){
+    /*VARIAVEIS*/
+    var cardref = document.getElementById("content-admin-stock");
+    var card = document.createElement("div");
+    var stockimg = document.createElement("div");
+    var stockimgimg = document.createElement("img");
+    var bdadminstockinfo = document.createElement("div");
+    var stockform = document.createElement("form");
+    var inputname = document.createElement("input");
+    var inputprice = document.createElement("input");
+    var inputstock = document.createElement("input");
+    var inputid = document.createElement("input");
+    var inputupdate = document.createElement("input");
+    var inputdelete = document.createElement("input");
+
+    /*Apeend childs*/
+    cardref.appendChild(card);
+    card.appendChild(stockimg);
+    stockimg.appendChild(stockimgimg); /*AAAAAA*/
+    card.appendChild(bdadminstockinfo);
+    bdadminstockinfo.appendChild(stockform);
+    stockform.appendChild(inputname);
+    stockform.appendChild(inputprice);
+    stockform.appendChild(inputstock);
+    stockform.appendChild(inputid);
+    stockform.appendChild(inputupdate);
+    stockform.appendChild(inputdelete);
+
+    /*CLASS*/
+    card.classList = "card-admin-stock";
+    stockimg.classList = "admin-stock-img";
+    bdadminstockinfo.classList = "bd-admin-stock-info";
+    inputupdate.classList = "admin-update pointer";
+    inputdelete.classList = "admin-delete pointer";
+
+    /*input*/
+    inputname.type = "text";
+    inputprice.type = "number";
+    inputstock.type = "number";
+    inputid.type = "text";
+    inputupdate.type = "submit";
+    inputdelete.type = "submit";
+    
+
+    /*input*/
+    inputname.value = snackname;
+    inputprice.value = snackprice;
+    inputstock.value = snackstock;
+    inputid.value = snackid;
+    inputupdate.value = "UPDATE";
+    inputdelete.value = "DELETE";
+
+    /*stockimgimg*/
+    stockimgimg.src = snackimg;
+    inputid.disabled = true;
+}
+
+function adduser2(){
+    /*VAR*/
+    var userID = document.getElementById("userID");
+    var userNickname = document.getElementById("userNickname");
+    var userEmail = document.getElementById("userEmail");
+    var userRequest = document.getElementById("userRequest");
+    var userIDdiv = document.createElement("div");
+    var userNicknamediv = document.createElement("div");
+    var userEmaildiv = document.createElement("div");
+    var userRequestdiv = document.createElement("div");
+
+    /*Criando div*/
+    userID.appendChild(userIDdiv);
+    userNickname.appendChild(userNicknamediv);
+    userEmail.appendChild(userEmaildiv);
+    userRequest.appendChild(userRequestdiv);
+
+    /*CLASS*/
+    userIDdiv.classList.add("btn-admin");
+    userNicknamediv.classList.add("btn-admin");
+    userEmaildiv.classList.add("btn-admin");
+    userRequestdiv.classList.add("btn-admin");
+
+    /*Conteudo*/
+    userIDdiv.innerHTML = "userphpid";
+    userNicknamediv.innerHTML = "usernicknamephp";
+    userEmaildiv.innerHTML= "useremailphp";
+    userRequestdiv.innerHTML= "0";
+}
+

@@ -1,0 +1,50 @@
+.animate1{
+    animation: animate1 1.5s ease;
+}
+.animate2{
+    animation: animate2 1.5s ease;
+}
+.animate1back{
+    animation: animate1back 1.5s ease;
+}
+.animate2back{
+    animation: animate2back 1.5s ease;
+}
+@keyframes animate1 {
+    0%{
+        
+    }
+    100%{
+        margin-right: -15%;
+        opacity: 0;
+    }
+}
+@keyframes animate1back {
+    0%{
+        opacity: 0;
+        margin-right: -15%;
+    }
+    100%{
+        margin-right: 10%;
+        opacity: 1;
+    }
+}
+@keyframes animate2 {
+    0%{
+        margin-left: -20%;
+        opacity: 0;
+    }
+    100%{
+        margin-left: 0px;
+    }
+}
+@keyframes animate2back {
+    0%{
+        margin-left: 0px;
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        margin-left: -20%;
+    }
+}
